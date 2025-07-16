@@ -4,8 +4,8 @@
     hero: alluarjun
     dirc: suku
     movie: pushpa
-  vars_files:
-    - details.yaml
+  # vars_files:
+  #   - details.yaml
   vars_prompt:
   - name: hero
     prompt: enter hero name
