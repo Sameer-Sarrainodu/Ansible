@@ -37,6 +37,6 @@
       msg: "{{ user_namer | lower }}"
   - name: checking ip
     vars:
-      ip: "273.21.2.3"
+      ip: "192.21.2.3"
     ansible.builtin.debug:
       msg: " {{ ip | ansible.utils.ipaddr }}"
