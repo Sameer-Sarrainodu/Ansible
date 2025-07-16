@@ -1,0 +1,11 @@
+- name: testing variables
+  hosts: node1
+  vars:
+    name: sameer
+    age: 25
+    hobby: make-india-proud
+    
+  tasks:
+  - name: printing above code
+    ansible.builtin.debug:
+      msg: "name: {{ name }},  age: {{ age }}, hobby: {{ hobby }}"
