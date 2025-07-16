@@ -1,0 +1,19 @@
+- name: play1
+  host: local
+  tasks:
+    - name: this is play1 task1
+      ansible.builtin.debug:
+        msg: "modi is play1 with task1" 
+    - name: this is play1 task2
+      ansible.builtin.debug:
+        msg: "modi is play1 with task2"
+
+- name: play2
+  hosts: local
+  tasks:
+    - name: this is play2 task1
+      ansible.builtin.debug:
+        msg: "sameer is play2 with task1"
+    - name: this is play2 task2
+      ansible.builtin.debug:
+        msg: "sameer is play2 with task2"
