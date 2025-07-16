@@ -1,5 +1,5 @@
 - name: hi
-  hosts: local
+  hosts: node1
   ansible.builtin.debug:
     msg: "echo helloworld"
   
