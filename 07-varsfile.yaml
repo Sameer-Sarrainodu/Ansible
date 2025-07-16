@@ -4,6 +4,6 @@
   - details.yaml
   tasks:
   - name: printing vars
-  ansible.builtin.debug:
-    msg: "user_name: {{ user_name }}, cgpa: {{ cgpa }}, college: {{ college }}"
+    ansible.builtin.debug:
+      msg: "user_name: {{ user_name }}, cgpa: {{ cgpa }}, college: {{ college }}"
   
