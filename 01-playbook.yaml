@@ -10,3 +10,14 @@
   tasks:
     - name: pinging
       ansible.builtin.ping:
+
+
+- name: installing nginx
+  hosts: node1
+  become: yes
+  tasks:
+    - name: installing nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+
