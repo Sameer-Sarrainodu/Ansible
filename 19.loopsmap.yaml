@@ -1,0 +1,12 @@
+- name: looping through maps
+  hosts: node1
+  become: yes
+  tasks:
+  - name: installing packages
+    ansible.builtin.dnf:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: "nginx", state: "present"}
+    - { name: "git", state: "present"}
+    - { name: "unzip", state: "present"}
