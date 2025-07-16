@@ -1,0 +1,13 @@
+- name: writing conditon for os
+  hosts: local
+  tasks:
+  - name: check dnf if redhat package manager
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: os_family == "RedHat"
+  - name: check pacman if archmanager
+    ansible.builtin.pacman:
+      name: nginx
+      state: present
+    when: os_family == "ArchLinux"
