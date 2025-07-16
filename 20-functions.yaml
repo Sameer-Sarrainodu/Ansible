@@ -1,0 +1,42 @@
+- name: functions
+  hosts: local
+  vars:
+    persons: "kasim,raheem,uddandu,sameer"
+  tasks:
+  - name: checking for undenfined var
+    ansible.builtin.debug:
+      msg: "{{ person | default=('uddandu') }}"
+  - name: printing names
+    ansible.builtin.debug:
+      msg: " {{ persons | split(',') }}"
+  - name: map to list
+    vars:
+      courses:
+        namer: devops
+        age: 25
+        no: 1
+    ansible.builtin.debug:
+      msg: " {{ courses | dict2items }}"
+  - name: lst to map
+    vars:
+      courses:
+      - {'key': 'namer', 'value': 'sameer'}
+      - {'key': 'age', 'value': 21}
+      - {'key': 'cour', 'value': 'devops'}
+    ansible.builtin.debug:
+      msg: " {{ courses | items2dict }}"
+  - name: upper
+    vars:
+      user_name: Sameer
+    ansible.builtin.debug:
+      msg: "{{ username | upper }}"
+  - name: lower
+    vars:
+      user_namer: SAMEER
+    ansible.builtin.debug:
+      msg: "{{ usernamer | lower }}"
+  - name: checking ip
+    vars:
+      ip: "273.21.2.3"
+    ansible.builtin.debug:
+      msg: " {{ ip | ansible.utils.ipaddr }}"
