@@ -1,0 +1,19 @@
+- name: printing datatypes
+  hosts: local
+  vars:
+    first: sameer
+    ages: 25
+    male: true
+    cgp: 7.4
+    tools:
+    - linux
+    - shell
+    - ansible
+    - terraform
+    automation:
+      ci: jenkins
+      scripting: ansible,shell,terraform,python
+    tasks:
+    - name: printing datatypes
+      ansible.builtin.debug:
+        msg: "first: {{ first }},cgp: {{ cgp }}, age: {{ ages }}, male: {{ male }}, tools: {{ tools }}, automation: {{ automation }}"
