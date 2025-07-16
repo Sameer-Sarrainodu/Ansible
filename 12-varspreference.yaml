@@ -15,9 +15,9 @@
     prompt: enter movie name
   tasks:
   - name: printing hero data
-    vars:
-      hero: prabhas
-      dirc: rajamouli
-      movie: bahubali
+    # vars:
+    #   hero: prabhas
+    #   dirc: rajamouli
+    #   movie: bahubali
     ansible.builtin.debug:
       msg: "hero: {{ hero }}, director: {{ dirc }} movie: {{ movie }}"
