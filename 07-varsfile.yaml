@@ -1,0 +1,9 @@
+- name: testing vars file
+  hosts: local
+  vars:
+  - details.yaml
+  tasks:
+  - name: printing vars
+  ansible.builtin.debug:
+    msg: "user_name: {{ user_name }}, cgpa: {{ cgpa }}, college: {{ college }}"
+  
