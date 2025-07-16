@@ -1,7 +1,7 @@
 - name: testing variables
   hosts: node1
   vars:
-    name: sameer
+    user_name: sameer
     age: 25
     hobby: make-india-proud
     
