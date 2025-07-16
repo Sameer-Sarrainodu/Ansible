@@ -1,6 +1,7 @@
 - name: hi
   hosts: node1
-  ansible.builtin.debug:
-    msg: "echo helloworld"
+  tasks:
+    ansible.builtin.debug:
+      msg: "echo helloworld"
   
 
