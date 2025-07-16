@@ -1,0 +1,6 @@
+- name: printing vars from inv node
+  hosts: node1
+  tasks:
+  - name: printing vars inv node1
+    ansible.builtin.debug:
+      msg: "course: {{ course }}, hours: {{ hours }}"
