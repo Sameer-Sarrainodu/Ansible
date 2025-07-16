@@ -29,12 +29,12 @@
     vars:
       user_name: Sameer
     ansible.builtin.debug:
-      msg: "{{ username | upper }}"
+      msg: "{{ user_name | upper }}"
   - name: lower
     vars:
       user_namer: SAMEER
     ansible.builtin.debug:
-      msg: "{{ usernamer | lower }}"
+      msg: "{{ user_namer | lower }}"
   - name: checking ip
     vars:
       ip: "273.21.2.3"
