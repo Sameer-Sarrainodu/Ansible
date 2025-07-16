@@ -1,5 +1,6 @@
 - name: installing packs using loops
   host: node1
+  become: yes
   tasks:
   - name: installing {{ item }}
     ansible.builtin.dnf:
