@@ -5,7 +5,7 @@
   tasks:
   - name: checking for undenfined var
     ansible.builtin.debug:
-      msg: "{{ person | default=('uddandu') }}"
+      msg: "{{ person | default('uddandu') }}"
   - name: printing names
     ansible.builtin.debug:
       msg: " {{ persons | split(',') }}"
