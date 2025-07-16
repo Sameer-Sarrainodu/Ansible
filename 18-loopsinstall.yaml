@@ -1,0 +1,11 @@
+- name: installing packs using loops
+  host: node1
+  tasks:
+  - name: installing {{ item }}
+    ansible.builtin.dnf:
+      name: {{ item }}
+      state: present
+    loop:
+    - nginx
+    - git
+    - zip
