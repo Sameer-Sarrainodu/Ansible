@@ -1,0 +1,6 @@
+- name: vars using inventory
+  hosts: local
+  tasks: 
+  - name: printing local inv variables
+    ansible.builtin.debug:
+      msg: "fruit {{ fruit }},eat: {{ eat }}, animal: {{ animal }}"
