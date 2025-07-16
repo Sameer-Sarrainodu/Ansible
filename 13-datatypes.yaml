@@ -13,7 +13,7 @@
     automation:
       ci: jenkins
       scripting: ansible,shell,terraform,python
-    tasks:
-    - name: printing datatypes
-      ansible.builtin.debug:
-        msg: "first: {{ first }},cgp: {{ cgp }}, age: {{ ages }}, male: {{ male }}, tools: {{ tools }}, automation: {{ automation }}"
+  tasks:
+  - name: printing datatypes
+    ansible.builtin.debug:
+      msg: "first: {{ first }},cgp: {{ cgp }}, age: {{ ages }}, male: {{ male }}, tools: {{ tools }}, automation: {{ automation }}"
