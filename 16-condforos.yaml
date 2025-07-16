@@ -1,5 +1,6 @@
 - name: writing conditon for os
-  hosts: local
+  hosts: node1
+  become: yes
   tasks:
   - name: check dnf if redhat package manager
     ansible.builtin.dnf:
