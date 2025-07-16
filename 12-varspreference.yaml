@@ -1,0 +1,23 @@
+- name: vars preference
+  hosts: node1
+  vars:
+    hero: alluarjun
+    dirc: suku
+    movie: pushpa
+  vars_files:
+    - course.yaml
+  vars_prompt:
+  - name: hero
+    prompt: enter hero name
+  - name: dirc
+    prompt: enter dir name
+  - name: movie
+    prompt: enter movie name
+  tasks:
+  - name: printing hero data
+    vars:
+      hero: prabhas
+      dirc: rajamouli
+      movie: bahubali
+    ansible.builtin.debug:
+      msg: "hero: {{ hero }}, director: {{ dirc }} movie: {{ movie }}"
