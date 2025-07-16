@@ -1,7 +1,12 @@
-- name: hi
+- name: testing printing
   hosts: node1
   tasks:
-    ansible.builtin.debug:
+    - name: showing a message
+      ansible.builtin.debug:
       msg: "echo helloworld"
   
-
+- name: pinging
+  hosts: local
+  tasks:
+    - name: pinging
+      ansible.builtin.ping:
