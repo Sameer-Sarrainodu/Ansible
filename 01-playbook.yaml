@@ -3,7 +3,7 @@
   tasks:
     - name: showing a message
       ansible.builtin.debug:
-      msg: "echo helloworld"
+        msg: "echo helloworld"
   
 - name: pinging
   hosts: local
