@@ -5,9 +5,9 @@
     ansible.builtin.dnf:
       name: nginx
       state: present
-    when: os_family == "RedHat"
+    when: ansible.os_family == "RedHat"
   - name: check pacman if archmanager
     ansible.builtin.pacman:
       name: nginx
       state: present
-    when: os_family == "ArchLinux"
+    when: ansible.os_family == "ArchLinux"
