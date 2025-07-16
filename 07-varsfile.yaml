@@ -1,6 +1,6 @@
 - name: testing vars file
   hosts: local
-  vars:
+  vars_files:
   - details.yaml
   tasks:
   - name: printing vars
