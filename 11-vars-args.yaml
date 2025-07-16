@@ -1,0 +1,6 @@
+- name: printing vars from arg
+  hosts: node1
+  tasks:
+  - name: printing from args
+    ansible.builtin.debug:
+      msg: "game {{ game }}, time: {{ time }}"
