@@ -1,0 +1,13 @@
+- name: this is task vars test
+  hosts: node1
+  vars:
+    school: pvpsit
+    cgpa: 7.4 
+  tasks:
+  - name: printing task vars
+    vars:
+      roll_no: 18501A0499
+    ansible.builtin.debug:
+      msg: "school: {{ school }},cgpa: {{ cgpa }}, roll_no: {{ roll_no }}"
+
+
