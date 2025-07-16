@@ -6,13 +6,13 @@
     movie: pushpa
   # vars_files:
   #   - details.yaml
-  vars_prompt:
-  - name: hero
-    prompt: enter hero name
-  - name: dirc
-    prompt: enter dir name
-  - name: movie
-    prompt: enter movie name
+  # vars_prompt:
+  # - name: hero
+  #   prompt: enter hero name
+  # - name: dirc
+  #   prompt: enter dir name
+  # - name: movie
+  #   prompt: enter movie name
   tasks:
   - name: printing hero data
     # vars:
