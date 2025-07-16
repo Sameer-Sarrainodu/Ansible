@@ -5,7 +5,7 @@
     dirc: suku
     movie: pushpa
   vars_files:
-    - course.yaml
+    - details.yaml
   vars_prompt:
   - name: hero
     prompt: enter hero name
