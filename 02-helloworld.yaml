@@ -1,0 +1,6 @@
+- name: testing printing
+  hosts: node1
+  tasks:
+    - name: showing a message
+      ansible.builtin.debug:
+        msg: "echo helloworld"
